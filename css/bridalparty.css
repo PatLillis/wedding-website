@@ -1,0 +1,109 @@
+.party-outer-left, .party-outer-right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.party-outer-left {
+    float: left;
+    color: #282828;
+}
+
+.party-outer-right {
+    float: right;
+    color: white;
+}
+
+.party-outer-left .party-inner {
+    background: url(../img/subtle-patterns/subtle-white-feathers.png) top left;
+    -webkit-box-shadow: inset 10px 10px 100px rgba(0, 0, 0, 0.3), inset -10px -10px 100px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 10px 10px 100px rgba(0, 0, 0, 0.3), inset -10px -10px 100px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 10px 10px 100px rgba(0, 0, 0, 0.3), inset -10px -10px 100px rgba(0, 0, 0, 0.3);
+}
+
+.party-outer-right .party-inner {
+    background: url(../img/subtle-patterns/dark-wood.png) top left;
+    -webkit-box-shadow: inset 10px 10px 100px rgba(0, 0, 0, 0.7), inset -10px -10px 100px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: inset 10px 10px 100px rgba(0, 0, 0, 0.7), inset -10px -10px 100px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 10px 10px 100px rgba(0, 0, 0, 0.7), inset -10px -10px 100px rgba(0, 0, 0, 0.7);
+}
+
+.paper {
+    width: 100%;
+    height: 100%;
+}
+
+.party-inner {
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.party-inner-content {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+}
+
+.groomsman {
+    margin: 25px;
+    clear: both;
+}
+
+.groomsman-text {
+    margin-left: 200px;
+}
+
+.groomsman-photo {
+    float: left;
+    margin-left: 25px;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    background-size: contain;
+}
+
+.groomsman-photo.groomsman-1 {
+    background-image: url(../img/bridal-party/groomsman-1.png);
+}
+
+.groomsman-photo.groomsman-2 {
+    background-image: url(../img/bridal-party/groomsman-2.png);
+}
+
+.groomsman-photo.groomsman-3 {
+    background-image: url(../img/bridal-party/groomsman-3.png);
+}
+
+.groomsman-photo.groomsman-4 {
+    background-image: url(../img/bridal-party/groomsman-4.png);
+}
+
+.party-inner h3 {
+    font-size: 48px;
+    margin-top: 0;
+}
+
+.party-inner p {
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .party-inner {
+        top: 0;
+    }
+
+    .party-inner h3 {
+        font-size: 72px;
+    }
+
+    .party-inner p {
+        font-size: 14px;
+    }
+}

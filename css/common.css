@@ -1,0 +1,168 @@
+body {
+    background-image: url(../img/subtle-patterns/black-linen-2X.png);
+    background-color: #282828;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+html, body {
+    /*overflow: hidden;*/
+    height: 100%;
+}
+
+.font-cursive {
+    font-family: 'Great Vibes', cursive;
+}
+
+.font-open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.font-linden-hill {
+    font-family: 'Linden Hill', serif;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+nav.navbar {
+    -webkit-box-shadow: 0 10px 20px 0 rgba(40, 40, 40, 0.3);
+    -moz-box-shadow: 0 10px 20px 0 rgba(40, 40, 40, 0.3);
+    box-shadow: 0 10px 20px 0 rgba(40, 40, 40, 0.3);
+}
+
+.container-fluid.main {
+    position: relative;
+    padding-top: 50px;
+    height: 960px;
+    max-height: 100%;
+}
+
+.raspberry {
+    color: #7d123e;
+}
+
+.bg-raspberry {
+    background-color: #7d123e;
+}
+
+.bg-raspberry-trans {
+    background-color: rgba(125, 18, 62, 0.9);
+}
+
+/* Nav-Tabs */
+
+.nav-tabs {
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.nav-tabs > .page,
+.nav-tabs > .page-prev,
+.nav-tabs > .page-next {
+    margin: 4px;
+    float: right;
+}
+
+.nav-tabs > .page {
+    margin-top: 16px;
+}
+
+.nav-tabs > .page-prev,
+.nav-tabs > .page-next {
+    font-size: 22px;
+}
+
+.nav-tabs > .page > a,
+.nav-tabs > .page-prev > span,
+.nav-tabs > .page-next > span {
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    border: none;
+}
+
+.nav-tabs > .page > a {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+}
+
+.nav-tabs > li.page:not(.active) > a:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-tabs > .page-prev > span,
+.nav-tabs > .page-next > span {
+    cursor: pointer;
+}
+
+.nav-tabs > .page-prev > .disabled,
+.nav-tabs > .page-next > .disabled {
+    cursor: default;
+}
+
+.nav-tabs > .page-prev > :hover,
+.nav-tabs > .page-next > :hover {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-tabs > .page.active > a {
+    background-color: #fff;
+}
+
+.nav-tabs > .tab-titles > .tab-title:not(.active) {
+    display: none;
+}
+
+
+/* Content-Card */
+.content-card-row {
+    color: #fff;
+}
+
+.content-card-col {
+    border-radius: 15px;
+    height: 100%;
+    padding: 30px;
+    margin: 15px;
+    box-shadow:         4px 4px 15px 0 rgba(0, 0, 0, 0.6);
+}
+
+.content-card-title {
+    font-family: 'Linden Hill', serif;
+    font-size: 55px;
+}
+
+/* Responsive rules */
+
+@media (min-width: 768px) {
+    nav.navbar {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .container-fluid.main {
+        margin-top: 0;
+        padding-bottom: 50px;
+    }
+
+    .content-card-col {
+        min-width: 500px;
+    }
+
+    .content-card-row {
+        position: absolute;
+        margin-right: 25px;
+        bottom: 75px;
+        left: 40px;
+    }
+}

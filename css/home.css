@@ -1,0 +1,62 @@
+body {
+    background-image: url(../img/engagement-session/engagement_67.jpg);
+}
+
+div.announcement {
+    text-align: center;
+    width: 450px;
+    padding: 20px 0;
+    border-radius: 40px;
+    margin: 0 auto -105px;
+    left:0; right:0;
+    bottom: 50%;
+    position: absolute;
+}
+
+.announcement-line {
+    height: 1px;
+    background-color: #7d123e;
+}
+
+.announcement-top h3{
+    display: inline;
+    font-size: 26px;
+    margin: 0 15px;
+}
+
+.announcement-bottom .announcement-line {
+    margin-bottom: 24px;
+}
+
+.announcement-top .announcement-line {
+    margin-bottom: 9px;
+    width: 134px;
+    display: inline-block;
+}
+
+div.announcement h3.announcement-main {
+    font-size: 80px;
+    padding: 33px 0;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    div.announcement {
+        width: 700px;
+        margin: 0 auto -146px;
+    }
+
+    .announcement-top h3 {
+        font-size: 42px;
+    }
+
+    .announcement-top .announcement-line {
+        margin-bottom: 14px;
+        width: 219px;
+    }
+    
+    div.announcement h3.announcement-main {
+        font-size: 120px;
+        padding: 50px 0;
+    }
+}
