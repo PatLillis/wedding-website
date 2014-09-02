@@ -1,14 +1,74 @@
 ﻿$(function () {
-    var images = $('.images img'),
-        buttons = $('.buttons .button');
+    var galleryImages = $('.gallery-image'),
+        activeIndex = galleryImages.index('.active');
 
-    buttons.on('click', function (e) {
-        var index = $(this).index();
+    //No active elements, activate first.
+    if (activeIndex == -1) {
+        galleryImages.first().addClass('active');
+    }
 
-        images.removeClass('active');
-        buttons.removeClass('active');
+    galleryImages.find('.carousel-control.left').on('click', prevSlide);
+    galleryImages.find('.carousel-control.right').on('click', nextSlide);
 
-        images.eq(index).addClass('active');
-        $(this).addClass('active');
-    });
+    function prevSlide()
+    {
+        var thisSlide, nextSlide;
+
+        if (activeIndex != -1 && activeIndex < galleryImages.length) {
+            thisSlide = galleryImages.eq(activeIndex);
+            nextSlide = galleryImages.eq((activeIndex - 1) % galleryImages.length);
+        }
+        else {
+            thisSlide = null;
+            nextSlide = galleryImages.first();
+        }
+
+        slide(thisSlide, nextSlide);
+    }
+
+    function nextSlide() {
+        var thisSlide, nextSlide;
+
+        if (activeIndex != -1) {
+            thisSlide = galleryImages.eq(activeIndex);
+            nextSlide = galleryImages.eq((activeIndex + 1) % galleryImages.length);
+        }
+        else {
+            thisSlide = null;
+            nextSlide = galleryImages.first();
+        }
+
+        slide(thisSlide, nextSlide);
+    }
+
+    function toSlide(targetIndex)
+    {
+        var thisSlide, nextSlide;
+
+        if (activeIndex != -1 && activeIndex < galleryImages.length &&
+            targetIndex != -1 && targetIndex < galleryImages.length) {
+            thisSlide = galleryImages.eq(activeIndex);
+            nextSlide = galleryImages.eq(targetIndex);
+        }
+        else {
+            thisSlide = null;
+            nextSlide = galleryImages.first();
+        }
+    }
+
+    function getSlideIndex(slide)
+    {
+        return galleryImages.index(slide);
+    }
+
+    function slide(thisSlide, nextSlide)
+    {
+        if (nextSlide) {
+            nextSlide.addClass('active');
+            activeIndex = getSlideIndex(nextSlide);
+
+            if (thisSlide)
+                thisSlide.removeClass('active');
+        }
+    }
 });
