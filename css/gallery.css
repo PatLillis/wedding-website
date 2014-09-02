@@ -30,6 +30,12 @@
         display: inline-block;
         height: 100%;
         vertical-align: middle;
+        opacity: 0.7;
+    }
+
+    .gallery-image .center-helper:hover,
+    .gallery-image .center-helper:focus {
+        opacity: 0.9;
     }
 
         .gallery-image .center-helper.left {
@@ -72,5 +78,9 @@
         -o-transition: opacity linear 1s, visibility linear 1s;
         -webkit-transition: opacity linear 1s, visibility linear 1s;
         transition: opacity linear 1s, visibility linear 1s;
+    }
+
+    .gallery-image .center-helper {
+        opacity: 0.5;
     }
 }
