@@ -16,10 +16,6 @@
     width: 100%;
     padding-top: 50px;
     text-align: center;
-    -moz-transition: opacity linear 1s, visibility linear 1s;
-    -o-transition: opacity linear 1s, visibility linear 1s;
-    -webkit-transition: opacity linear 1s, visibility linear 1s;
-    transition: opacity linear 1s, visibility linear 1s;
     white-space: nowrap;
 }
 
@@ -72,5 +68,9 @@
 @media (min-width: 768px) {
     .gallery-image {
         padding-top: 0;
+        -moz-transition: opacity linear 1s, visibility linear 1s;
+        -o-transition: opacity linear 1s, visibility linear 1s;
+        -webkit-transition: opacity linear 1s, visibility linear 1s;
+        transition: opacity linear 1s, visibility linear 1s;
     }
 }
