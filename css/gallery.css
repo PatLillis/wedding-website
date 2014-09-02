@@ -71,6 +71,14 @@
         border: solid 1px #7d123e;
     }
 
+.carousel-indicators {
+    bottom: 70px;
+}
+
+.carousel-indicators > .indicator.active {
+    cursor: default;
+}
+
 @media (min-width: 768px) {
     .gallery-image {
         padding-top: 0;
