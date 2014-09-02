@@ -34,16 +34,15 @@
         display: inline-block;
         height: 100%;
         vertical-align: middle;
-        width: 5%;
     }
 
         .gallery-image .center-helper.left {
-            margin-right: -5%;
+            margin-right: -15%;
             left: auto;
         }
 
         .gallery-image .center-helper.right {
-            margin-left: -5%;
+            margin-left: -15%;
             right: auto;
         }
 
@@ -74,24 +73,4 @@
     .gallery-image {
         padding-top: 0;
     }
-
-        .gallery-image .center-helper {
-            width: 15%;
-        }
-
-        .gallery-image .center-helper.left {
-            margin-right: -15%;
-        }
-
-        .gallery-image .center-helper.right {
-            margin-left: -15%;
-        }
-
-        .gallery-image .center-helper.left .glyphicon {
-            left: -20%;
-        }
-
-        .gallery-image .center-helper.right .glyphicon {
-            right: -20%;
-        }
 }
