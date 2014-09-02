@@ -21,7 +21,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body class="bg-white">
     <nav class="navbar navbar-default navbar-fixed-top navbar-center" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -47,68 +47,26 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.navbar-inner -->
     </nav>
-    <div class="container-fluid main">
-        <div class="row content-card-row">
-            <div class="col-sm-1 bg-raspberry-trans content-card-col">
-                <div id="gallery-carousel" class="carousel slide" data-ride="carousel" data-interval="7500">
-                    <!--<img class="gallery-photo" src="img/gallery/lg/awkward-kiss.jpg" />-->
-
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#gallery-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#gallery-carousel" data-slide-to="1"></li>
-                        <li data-target="#gallery-carousel" data-slide-to="2"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="img/gallery/lg/awkward-kiss.jpg" alt="Awkward Kiss">
-                        </div>
-                        <div class="item">
-                            <img src="img/gallery/lg/jesus-cups.jpg" alt="Jesus Cups">
-                        </div>
-                        <div class="item">
-                            <img src="img/gallery/lg/me_and_gyda.jpg" alt="Kiersten's Breakfast">
-                        </div>
-                    </div>
-
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#gallery-carousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#gallery-carousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--
-    <div class="images">
-        <img class="image-1 active" src="img/gallery/lg/awkward-kiss.jpg" />
-        <img class="image-2" src="img/gallery/lg/jesus-cups.jpg" />
-        <img class="image-3" src="img/gallery/lg/kiersten-breakfast.jpg" />
-        <img class="image-4" src="img/gallery/lg/kiersten-ready-to-go.jpg" />
-        <img class="image-5" src="img/gallery/lg/kiersten-ring-1.jpg" />
-        <img class="image-6" src="img/gallery/lg/kiersten-ring-2.jpg" />
-        <img class="image-7" src="img/gallery/lg/legos.jpg" />
-        <img class="image-8" src="img/gallery/lg/me_and_gyda.jpg" />
-        <img class="image-9" src="img/gallery/lg/squirrel.jpg" />
-    </div>
-    <div class="buttons">
-        <div class="button image-1 active"></div>
-        <div class="button image-2"></div>
-        <div class="button image-3"></div>
-        <div class="button image-4"></div>
-        <div class="button image-5"></div>
-        <div class="button image-6"></div>
-        <div class="button image-7"></div>
-        <div class="button image-8"></div>
-        <div class="button image-9"></div>
-    </div>
-        -->
+    <ul class="gallery">
+        <li class="gallery-image active" id="gallery-carousel">
+            <a class="left center-helper carousel-control" href="#gallery-carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <img class="image " src="img/gallery/lg/engagement_01.jpg" />
+            <a class="right center-helper carousel-control" href="#gallery-carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </li>
+        <li class="gallery-image">
+            <a class="left center-helper carousel-control" href="#gallery-carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <img class="image " src="img/gallery/lg/engagement_02.jpg" />
+            <a class="right center-helper carousel-control" href="#gallery-carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </li>
+    </ul>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

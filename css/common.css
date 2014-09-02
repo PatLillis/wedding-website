@@ -1,6 +1,4 @@
 body {
-    background-image: url(../img/subtle-patterns/black-linen-2X.png);
-    background-color: #282828;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -9,6 +7,22 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+
+    body.bg-black {
+        background-image: url(../img/subtle-patterns/black-linen-2X.png);
+        background-color: #282828;
+        background-repeat: repeat;
+        background-position: top left;
+        background-size: 964px 980px;
+    }
+
+    body.bg-white {
+        background-image: url(../img/subtle-patterns/subtle-white-feathers-contrast.png);
+        background-color: #282828;
+        background-repeat: repeat;
+        background-position: top left;
+        background-size: 500px 333px;
+    }
 
 html, body {
     /*overflow: hidden;*/
@@ -39,7 +53,8 @@ nav.navbar {
 
 .container-fluid.main {
     position: relative;
-    padding-top: 50px;
+    padding-top: 65px;
+    padding-bottom: 15px;
     height: 960px;
     max-height: 100%;
 }
@@ -63,67 +78,72 @@ nav.navbar {
     margin-bottom: 15px;
 }
 
-.nav-tabs > .page,
-.nav-tabs > .page-prev,
-.nav-tabs > .page-next {
-    margin: 4px;
-    float: right;
-}
+    .nav-tabs > .page,
+    .nav-tabs > .page-prev,
+    .nav-tabs > .page-next {
+        margin: 4px;
+        float: right;
+    }
 
-.nav-tabs > .page {
-    margin-top: 16px;
-}
+    .nav-tabs > .page {
+        margin-top: 16px;
+    }
 
-.nav-tabs > .page-prev,
-.nav-tabs > .page-next {
-    font-size: 22px;
-}
+    .nav-tabs > .page-prev,
+    .nav-tabs > .page-next {
+        font-size: 22px;
+    }
 
-.nav-tabs > .page > a,
-.nav-tabs > .page-prev > span,
-.nav-tabs > .page-next > span {
-    color: rgba(255, 255, 255, 0.6);
-    padding: 0;
-    width: 10px;
-    height: 10px;
-    border: none;
-}
+        .nav-tabs > .page > a,
+        .nav-tabs > .page-prev > span,
+        .nav-tabs > .page-next > span {
+            color: rgba(255, 255, 255, 0.6);
+            padding: 0;
+            width: 10px;
+            height: 10px;
+            border: none;
+        }
 
-.nav-tabs > .page > a {
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 5px;
-}
+    .nav-tabs > .page > a {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 5px;
+    }
 
-.nav-tabs > li.page:not(.active) > a:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-}
+    .nav-tabs > li.page:not(.active) > a:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
 
-.nav-tabs > .page-prev > span,
-.nav-tabs > .page-next > span {
-    cursor: pointer;
-}
+    .nav-tabs > .page-prev > span,
+    .nav-tabs > .page-next > span {
+        cursor: pointer;
+    }
 
-.nav-tabs > .page-prev > .disabled,
-.nav-tabs > .page-next > .disabled {
-    cursor: default;
-}
+    .nav-tabs > .page-prev > .disabled,
+    .nav-tabs > .page-next > .disabled {
+        cursor: default;
+    }
 
-.nav-tabs > .page-prev > :hover,
-.nav-tabs > .page-next > :hover {
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.8);
-}
+    .nav-tabs > .page-prev > :hover,
+    .nav-tabs > .page-next > :hover {
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.8);
+    }
 
-.nav-tabs > .page.active > a {
-    background-color: #fff;
-}
+    .nav-tabs > .page.active > a {
+        background-color: #fff;
+    }
 
-.nav-tabs > .tab-titles > .tab-title:not(.active) {
-    display: none;
-}
+    .nav-tabs > .tab-titles > .tab-title:not(.active) {
+        display: none;
+    }
 
 
 /* Content-Card */
+
+.row {
+    margin-top: -15px;
+}
+
 .content-card-row {
     color: #fff;
 }
@@ -133,7 +153,9 @@ nav.navbar {
     height: 100%;
     padding: 30px;
     margin: 15px;
-    box-shadow:         4px 4px 15px 0 rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.6);
 }
 
 .content-card-title {
@@ -152,7 +174,8 @@ nav.navbar {
 
     .container-fluid.main {
         margin-top: 0;
-        padding-bottom: 50px;
+        padding-bottom: 65px;
+        padding-top: 15px;
     }
 
     .content-card-col {
