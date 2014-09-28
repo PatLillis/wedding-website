@@ -148,7 +148,8 @@ nav.navbar {
     color: #fff;
 }
 
-.content-card-col {
+.content-card-col,
+.content-card-col-wide {
     border-radius: 15px;
     height: 100%;
     padding: 30px;
@@ -160,7 +161,7 @@ nav.navbar {
 
 .content-card-title {
     font-family: 'Linden Hill', serif;
-    font-size: 55px;
+    font-size: 40px;
 }
 
 /* Responsive rules */
@@ -177,9 +178,18 @@ nav.navbar {
         padding-bottom: 65px;
         padding-top: 15px;
     }
+    
+    .content-card-title {
+        font-family: 'Linden Hill', serif;
+        font-size: 55px;
+    }
 
     .content-card-col {
         min-width: 500px;
+    }
+
+    .content-card-col-wide {
+        min-width: 650px;
     }
 
     .content-card-row {
