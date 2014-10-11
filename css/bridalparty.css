@@ -13,13 +13,19 @@ body {
     /*margin-right: -15px;*/
 }
 
-.bridesmaids a,
-.groomsmen a {
+.bridesmaids > .bridesmaid,
+.groomsmen > .groomsman {
+    position: relative;
     display: inline-block;
     width: 23%;
 }
 
-.bridesmaids a:not(:last-child),
+.bridesmaids > .bridesmaid.in-front,
+.groomsmen > .groomsman.in-front {
+    z-index: 1060;
+}
+
+.bridesmaids .bridesmaid:not(:last-child),
 .groomsmen a:not(:last-child) {
     margin-right: 2%;
 }
@@ -30,18 +36,46 @@ body {
 }
 
 .bridesmaids a img,
-.groomsmen a img{
+.groomsmen a img {
     width: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: 7px 10px 15px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow:    7px 10px 15px 5px rgba(0,0,0,0.4);
+    box-shadow:         7px 10px 15px 5px rgba(0,0,0,0.4);
 }
 
-.modal-backdrop {
+.bridesmaids a img {
+    border: 2px solid #fff;
+}
+
+.groomsmen a img {
+    border: 2px solid #282828;
+}
+
+.party-popover {
+    max-width: 600px;
+    background-color: rgb(255, 255, 170);
+}
+
+.party-popover.top > .arrow::after {
+    border-top-color: rgb(255, 255, 170);
+}
+
+.popover-title {
+    background-color: white;
+    font-weight: bold;
+    color: #282828;
+    /*font-size: 16px;e*/
+}
+
+.modal-backdrop.in {
     opacity: 0.8;
     filter: alpha(opacity=70);
     margin-top: 50px;
 }
 
 @media (min-width: 768px) {
-    .modal-backdrop {
+    .modal-backdrop.in {
         margin-top: 0;
         margin-bottom: 50px;
     }

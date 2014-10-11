@@ -1,7 +1,32 @@
 ﻿body {
-    background: url(../img/engagement-session/engagement_57.jpg) no-repeat center center fixed;
+    /*background: url(../img/engagement-session/engagement_57.jpg) no-repeat center center fixed;*/
+    position: relative;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+body.dating {
+    background-image: url(../img/engagement-session/engagement_02.jpg);
+}
+
+.bg-img-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.bg-img-wrapper img {
+    -webkit-transition: opacity .3s linear;
+    -o-transition: opacity .3s linear;
+    transition: opacity .3s linear;
+    /*max-height: 100%;*/
+    position: absolute;
+    min-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
 }

@@ -1,4 +1,24 @@
 ﻿$(function () {
+    var galleryCarousel = $('#gallery-carousel'),
+        indicatorParent = $('.carousel-indicators');
+
+    for (var i = 0; i < 25; i++)
+    {
+        var active = (i == 0 ? ' active ' : '');
+
+        indicatorParent.append('<li class="indicator' + active + '" data-target="#gallery-carousel" data-slide-to="' + i + '"></li>')
+
+        galleryCarousel.append('<li class="gallery-image' + active + '">' +
+            '<a class="left center-helper carousel-control" href="#gallery-carousel" role="button" data-slide="prev">' +
+                '<span class="glyphicon glyphicon-chevron-left"></span>' +
+            '</a>' +
+            '<img class="image" src="img/gallery/lg/gallery-' + pad(i) + '.jpg" />' +
+            '<a class="right center-helper carousel-control" href="#gallery-carousel" role="button" data-slide="next">' +
+                '<span class="glyphicon glyphicon-chevron-right"></span>' +
+            '</a>' +
+        '</li>');
+    }
+
     var galleryImages = $('.gallery-image'),
         activeIndex = getIndex(galleryImages.find('.active')),
         indicators = $('.carousel-indicators > .indicator[data-slide-to]');
@@ -88,5 +108,13 @@
             indicators.eq(getIndex(nextSlide)).addClass('active');
             activeIndex = getSlideIndex(nextSlide);
         }
+    }
+
+    function pad(i)
+    {
+        if (i < 10 && i >= 0)
+            return '0' + i;
+        else
+            return i;
     }
 });

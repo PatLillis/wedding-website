@@ -65,8 +65,6 @@
         max-height: 100%;
         display: inline-block;
         vertical-align: middle;
-        margin-left: -4px;
-        margin-right: -4px;
         box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.6), -4px -4px 15px 0 rgba(0, 0, 0, 0.6);
         border: solid 1px #7d123e;
     }
@@ -75,9 +73,30 @@
     bottom: 70px;
 }
 
+.carousel-indicators > .indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 0;
+    border: 1px solid #7d123e;
+    background: white;
+    box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.6);
+}
+
+.carousel-indicators > .indicator {
+    margin: 4px;
+}
+
 .carousel-indicators > .indicator.active {
     cursor: default;
+    width: 19px;
+    height: 19px;
+    background: #7d123e;
 }
+
+.carousel-indicators > .indicator.active {
+    margin: 2px;
+}
+
 
 @media (min-width: 768px) {
     .gallery-image {
