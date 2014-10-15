@@ -1,5 +1,5 @@
 ﻿body {
-    background-image: url(../img/engagement-session/engagement_02.jpg);
+    background-image: url(../img/engagement-session/sm/engagement_02.jpg);
 }
 
 .registry-logo {
@@ -25,4 +25,11 @@
     display: block;
     margin: 0 auto;
     width: 80%;
+}
+
+@media(min-width: 768px) {
+    body {
+        background-image: url(../img/engagement-session/lg/engagement_02.jpg);
+
+    }
 }

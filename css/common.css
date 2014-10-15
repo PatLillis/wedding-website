@@ -1,3 +1,8 @@
+@font-face {
+    font-family: linLibertineR;
+    src: url(../fonts/linlibertine_re-4.7.5ro-webfont.woff);
+}
+
 body {
     background-repeat: no-repeat;
     background-position: center center;
@@ -162,6 +167,23 @@ nav.navbar {
 .content-card-title {
     font-family: 'Linden Hill', serif;
     font-size: 40px;
+}
+
+.tab-content {
+    font-size: 16px;
+}
+
+.tab-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.tab-content a:hover {
+    color: #ddf;
+}
+
+.tab-title {
+    font-weight: bold;
 }
 
 /* Responsive rules */

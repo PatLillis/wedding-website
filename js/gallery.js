@@ -1,6 +1,11 @@
 ﻿$(function () {
     var galleryCarousel = $('#gallery-carousel'),
-        indicatorParent = $('.carousel-indicators');
+        indicatorParent = $('.carousel-indicators'),
+        imageSize = 'sm';
+
+    if ($(window).width() >= 768) {
+        imageSize = 'lg';
+    }
 
     for (var i = 0; i < 25; i++)
     {
@@ -12,7 +17,7 @@
             '<a class="left center-helper carousel-control" href="#gallery-carousel" role="button" data-slide="prev">' +
                 '<span class="glyphicon glyphicon-chevron-left"></span>' +
             '</a>' +
-            '<img class="image" src="img/gallery/lg/gallery-' + pad(i) + '.jpg" />' +
+            '<img class="image" src="img/gallery/' + imageSize + '/gallery-' + pad(i) + '.jpg" />' +
             '<a class="right center-helper carousel-control" href="#gallery-carousel" role="button" data-slide="next">' +
                 '<span class="glyphicon glyphicon-chevron-right"></span>' +
             '</a>' +

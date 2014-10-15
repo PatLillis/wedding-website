@@ -1,5 +1,5 @@
 body {
-    background: url(../img/engagement-session/engagement_34.jpg) no-repeat center center fixed;
+    background: url(../img/engagement-session/sm/engagement_34.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -17,7 +17,7 @@ body {
 .groomsmen > .groomsman {
     position: relative;
     display: inline-block;
-    width: 23%;
+    width: 22%;
 }
 
 .bridesmaids > .bridesmaid.in-front,
@@ -74,9 +74,19 @@ body {
     margin-top: 50px;
 }
 
+.popover-content {
+    font: 15px 'linLibertineR', Arial, sans-serif;
+    line-height: 24px;
+    letter-spacing: 0.08em;
+}
+
 @media (min-width: 768px) {
     .modal-backdrop.in {
         margin-top: 0;
         margin-bottom: 50px;
+    }
+
+    body {
+        background-image: url(../img/engagement-session/lg/engagement_34.jpg)
     }
 }

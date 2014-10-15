@@ -10,6 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap-custom.css" rel="stylesheet" type="text/css">
     <link href="css/common.css" rel="stylesheet" type="text/css">
+    <link href="css/weddingdetails.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
     <!-- Google Fonts -->
@@ -41,21 +42,74 @@
                     <li><a href="ourstory">Our Story</a></li>
                     <li><a href="bridalparty">Bridal Party</a></li>
                     <li><a href="gallery">Gallery</a></li>
-                    <!--<li class="navbar-active"><a href="weddingdetails">Wedding Details</a></li>-->
+                    <li class="navbar-active"><a href="weddingdetails">Wedding Details</a></li>
                     <li><a href="registry">Registry</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.navbar-inner -->
     </nav>
 
-    <div class="container main">
-        <h3>Stuff Stuff Stuff Stuff Stuff Stuff Stuff Stuff Stuff <span class="label label-default">New</span></h3>
+    <div class="container-fluid main">
+        <div class="google-map" id="map-canvas"></div>
+        <!--<div class="map-cover"></div>
+
+        <div class="map-button">
+            <p>Live Map</p>
+        </div>-->
+
+        <div class="row content-card-row">
+            <div class="col-sm-1 bg-raspberry-trans content-card-col">
+                <h1 class="content-card-title text-center">Wedding Details</h1>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="tab-titles">
+                        <h4 class="tab-title fade ceremony active in">Ceremony</h4>
+                        <h4 class="tab-title fade reception">Reception</h4>
+                        <h4 class="tab-title fade hotels">Hotels</h4>
+                    </li>
+                    <li class="page-next fade in"><span role="tab">&raquo;</span></li>
+                    <li class="page page-last"><a href="#hotels" role="tab" data-toggle="tab"></a></li>
+                    <li class="page"><a href="#reception" role="tab" data-toggle="tab"></a></li>
+                    <li class="active page page-first"><a href="#ceremony" role="tab" data-toggle="tab"></a></li>
+                    <li class="page-prev fade"><span class="disabled" role="tab">&laquo;</span></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active fade in" id="ceremony">
+                        <p>
+                            The wedding ceremony will begin at 3:30pm at Journey Christian Church in Brownsburg, IN.
+                            The church is located off of E. US Highway 136, between Green St. and
+                            W. Northfield Dr. The address is <a href="https://goo.gl/maps/xOuLG" target="_blank"><b>6690 E. U.S. Highway 136, Brownsburg, IN 46112</b></a>.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="reception">
+                        <p>
+                            Cocktail hour at the reception will start after the ceremony ends around 4:30ish.
+                            Dinner and dancing will begin shortly after. Festivities will be held in the Avon Wedding Barn,
+                            and surrounding greenery. The address is <a href="https://goo.gl/maps/auFAJ" target="_blank"><b>7424 E. County Road 100 North Avon, IN 46123</b></a>.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="hotels">
+                        <p>
+                            We have reserved a block of rooms at the Fairfield Inn & Suites in
+                            Avon for the night of Saturday, May 16. Just mention the Manifold/Lillis wedding
+                            and they'll mark you down for our block. May is race month in Indianapolis,
+                            so hotels fill fast. We <i>strongly</i> recommend you book early! The address for the Fairfield is
+                            <a href="https://goo.gl/maps/GL1PG" target="_blank"><b>119 Angelina Way Avon, IN 46123</b></a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaQdh5bGI1js2QXfl6JK7ZfTZYVvkpWro"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/setup.js"></script>
+    <script src="js/custom-behavior.js"></script>
+    <script src="js/weddingdetails.js"></script>
 </body>
 </html>
