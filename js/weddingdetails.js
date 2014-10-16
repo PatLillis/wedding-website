@@ -108,7 +108,7 @@
         'Avon, IN 46123<br>' +
         '(317) 430-5391' +
       '</address>' +
-      '<a href="http:\\www.avonweddingbarn.com" target="_blank">avonweddingbarn.com</a>' +
+      '<a href="http://www.avonweddingbarn.com" target="_blank">avonweddingbarn.com</a>' +
       '</div>';
 
     var churchContentString = '<div class="info-window-content">' +
@@ -119,7 +119,7 @@
         'Brownsburg, IN 46112<br>' +
         '(317) 852-4630' +
       '</address>' +
-      '<a href="http:\\www.4journey.com" target="_blank">4journey.com</a>' +
+      '<a href="http://www.4journey.com" target="_blank">4journey.com</a>' +
       '</div>';
 
     var hotelContentString = '<div class="info-window-content">' +
