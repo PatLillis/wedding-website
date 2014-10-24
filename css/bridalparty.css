@@ -9,8 +9,6 @@ body {
 .bridesmaids, .groomsmen {
     width: 100%;
     margin-top: 15px;
-    /*margin-left: -15px;*/
-    /*margin-right: -15px;*/
 }
 
 .bridesmaids > .bridesmaid,
@@ -55,21 +53,43 @@ body {
 .party-popover {
     max-width: 600px;
     background-color: rgb(255, 255, 170);
+    padding: 0;
+    border: 2px solid #7d123e;
+    font-family: 'Linden Hill', serif;
+}
+
+.party-popover.top > .arrow {
+    border-top-color: #7d123e;
 }
 
 .party-popover.top > .arrow::after {
     border-top-color: rgb(255, 255, 170);
+    bottom: 2px;
 }
 
 .popover-title {
     background-color: white;
     font-weight: bold;
-    color: #282828;
-    /*font-size: 16px;e*/
+    padding-bottom: 0;
+    font-size: 55px;
+    line-height: 1.1;
+    font-weight: 500;
+    border-bottom: none;
+}
+
+.popover-subtitle {
+    background-color: white;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 500;
+    border-bottom: 2px solid #7d123e;
+    padding: 0 14px 7px;
+    margin: 0;
 }
 
 .modal-backdrop.in {
-    opacity: 0.8;
+    opacity: 0.7;
     filter: alpha(opacity=70);
     margin-top: 50px;
 }
@@ -78,6 +98,12 @@ body {
     font: 15px 'linLibertineR', Arial, sans-serif;
     line-height: 24px;
     letter-spacing: 0.08em;
+    font-style: normal;
+    line-height: 1.42857143;
+    padding: 14px;
+    font-size: 15px;
+    font-family: Roboto,Arial,sans-serif;
+    padding-top: 7px;
 }
 
 @media (min-width: 768px) {
