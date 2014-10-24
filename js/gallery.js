@@ -14,13 +14,13 @@
         indicatorParent.append('<li class="indicator' + active + '" data-target="#gallery-carousel" data-slide-to="' + i + '"></li>')
 
         galleryCarousel.append('<li class="gallery-image' + active + '">' +
-            '<a class="left center-helper carousel-control" href="#gallery-carousel" role="button" data-slide="prev">' +
+            '<button class="left center-helper carousel-control" role="button" data-slide="prev">' +
                 '<span class="glyphicon glyphicon-chevron-left"></span>' +
-            '</a>' +
+            '</button>' +
             '<img class="image" src="img/gallery/' + imageSize + '/gallery-' + pad(i) + '.jpg" />' +
-            '<a class="right center-helper carousel-control" href="#gallery-carousel" role="button" data-slide="next">' +
+            '<button class="right center-helper carousel-control" role="button" data-slide="next">' +
                 '<span class="glyphicon glyphicon-chevron-right"></span>' +
-            '</a>' +
+            '</button>' +
         '</li>');
     }
 
