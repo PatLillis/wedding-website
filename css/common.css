@@ -13,21 +13,21 @@ body {
     background-size: cover;
 }
 
-    body.bg-black {
-        background-image: url(../img/subtle-patterns/black-linen-2X.png);
-        background-color: #282828;
-        background-repeat: repeat;
-        background-position: top left;
-        background-size: 964px 980px;
-    }
+body.bg-black {
+    background-image: url(../img/subtle-patterns/black-linen-2X.png);
+    background-color: #282828;
+    background-repeat: repeat;
+    background-position: top left;
+    background-size: 964px 980px;
+}
 
-    body.bg-white {
-        background-image: url(../img/subtle-patterns/subtle-white-feathers-contrast.png);
-        background-color: #282828;
-        background-repeat: repeat;
-        background-position: top left;
-        background-size: 500px 333px;
-    }
+body.bg-white {
+    background-image: url(../img/subtle-patterns/subtle-white-feathers-contrast.png);
+    background-color: #282828;
+    background-repeat: repeat;
+    background-position: top left;
+    background-size: 500px 333px;
+}
 
 html, body {
     /*overflow: hidden;*/
@@ -48,6 +48,14 @@ html, body {
 
 .font-bold {
     font-weight: bold;
+}
+
+p {
+    line-height: 24px;
+    letter-spacing: 0.08em;
+    line-height: 1.42857143;
+    font-size: 15px;
+    font-family: Roboto,Arial,sans-serif;
 }
 
 nav.navbar {
@@ -183,7 +191,8 @@ nav.navbar {
 }
 
 .tab-title {
-    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Linden Hill', serif;
 }
 
 /* Responsive rules */
@@ -219,5 +228,9 @@ nav.navbar {
         margin-right: 25px;
         bottom: 75px;
         left: 40px;
+    }
+
+    .tab-title {
+        font-size: 28px;
     }
 }

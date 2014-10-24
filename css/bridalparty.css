@@ -95,14 +95,12 @@ body {
 }
 
 .popover-content {
-    font: 15px 'linLibertineR', Arial, sans-serif;
     line-height: 24px;
     letter-spacing: 0.08em;
-    font-style: normal;
     line-height: 1.42857143;
-    padding: 14px;
     font-size: 15px;
     font-family: Roboto,Arial,sans-serif;
+    padding: 14px;
     padding-top: 7px;
 }
 
