@@ -8,10 +8,11 @@
     pageAnchors.on('click', function () {
         var $this = $(this),
             tabSection = $this.closest('ul.nav.nav-tabs'),
+            tabTitles = tabSection.closest('.nav-tabs-wrapper').siblings('.tab-titles'),
             activeListItem = tabSection.find('> .active'),
-            activeTitle = tabSection.find('> .tab-titles > .active'),
+            activeTitle = tabTitles.find('> .active'),
             nextTitle = $this.attr('href').replace('#', ''),
-            nextTitleEl = tabSection.find('> .tab-titles > .' + nextTitle.toLowerCase()),
+            nextTitleEl = tabTitles.find('> .' + nextTitle.toLowerCase()),
             pagePrev = tabSection.find('li.page-prev'),
             pageNext = tabSection.find('li.page-next');
 

@@ -86,9 +86,16 @@ nav.navbar {
 
 /* Nav-Tabs */
 
-.nav-tabs {
+.nav-tabs-wrapper {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
     padding-bottom: 5px;
     margin-bottom: 15px;
+}
+
+.nav-tabs {
+    display: inline-block;
+    border: none;
 }
 
     .nav-tabs > .page,
@@ -133,6 +140,7 @@ nav.navbar {
 
     .nav-tabs > .page-prev > .disabled,
     .nav-tabs > .page-next > .disabled {
+        visibility: hidden;
         cursor: default;
     }
 
@@ -146,7 +154,7 @@ nav.navbar {
         background-color: #fff;
     }
 
-    .nav-tabs > .tab-titles > .tab-title:not(.active) {
+    .tab-titles > .tab-title:not(.active) {
         display: none;
     }
 
@@ -190,6 +198,10 @@ nav.navbar {
     color: #ddf;
 }
 
+.tab-titles {
+    text-align: center;
+}
+
 .tab-title {
     font-size: 24px;
     font-family: 'Linden Hill', serif;
@@ -228,6 +240,15 @@ nav.navbar {
         margin-right: 25px;
         bottom: 75px;
         left: 40px;
+    }
+
+    .nav-tabs-wrapper {
+        text-align: right;
+    }
+
+    .tab-titles {
+        float: left;
+        margin-top: -5px;
     }
 
     .tab-title {
