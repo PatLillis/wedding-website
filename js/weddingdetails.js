@@ -1,4 +1,27 @@
 ﻿$(document).on('ready', function () {
+    //Hook in "view map", "view details" buttons for small screens
+    var viewMapButton = $('#view-map'),
+        viewDetailsWrapper = $('.view-details-wrapper'),
+        viewDetailsButton = $('#view-details'),
+        mapCover = $('.google-map-cover'),
+        contentCardRow = $('.content-card-row');
+
+    viewMapButton.on('click', function () {
+        mapCover.addClass('active');
+        contentCardRow.addClass('active');
+
+        setTimeout(function () {
+            viewDetailsButton.addClass('btn-active');
+        }, 300);
+    });
+
+
+    viewDetailsButton.on('click', function () {
+        mapCover.removeClass('active');
+        contentCardRow.removeClass('active');
+        viewDetailsButton.removeClass('btn-active');
+    });
+
     //Initialize map
     var barnLatLng = new google.maps.LatLng(39.779423, -86.391244);
     var churchLatLng = new google.maps.LatLng(39.847335, -86.408528);

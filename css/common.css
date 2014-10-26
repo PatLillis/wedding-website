@@ -205,6 +205,25 @@ nav.navbar {
 .tab-title {
     font-size: 24px;
     font-family: 'Linden Hill', serif;
+    margin-bottom: 0;
+}
+
+/* Buttons */
+.btn {
+    font-family: Roboto,Arial,sans-serif;
+    font-weight: bold;
+}
+
+.btn-yellow {
+    color: #282828;
+    background-color: #FFA;
+    border-color: #cc8;
+}
+
+.btn-yellow:hover, .btn-yellow:active, .btn-yellow:focus {
+    background-color: #e6e696;
+    border-color: #adad6d;
+    outline: none;
 }
 
 /* Responsive rules */

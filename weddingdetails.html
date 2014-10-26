@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Pat & Kiersten - Wedding Details</title>
 
     <!-- Bootstrap -->
@@ -50,12 +50,13 @@
     </nav>
 
     <div class="container-fluid main">
-        <div class="google-map" id="map-canvas"></div>
-        <!--<div class="map-cover"></div>
-
-        <div class="map-button">
-            <p>Live Map</p>
-        </div>-->
+        <div class="google-map-wrapper">
+            <div class="google-map" id="map-canvas"></div>
+        </div>
+        <div class="google-map-cover"></div>
+        <div class="visible-xs view-details-wrapper">
+            <button class="btn btn-yellow" id="view-details">View Details</button>
+        </div>
 
         <div class="row content-card-row">
             <div class="col-sm-1 bg-raspberry-trans content-card-col">
@@ -104,6 +105,9 @@
                             <a href="https://goo.gl/maps/GL1PG" target="_blank"><b>119 Angelina Way Avon, IN 46123</b></a>.
                         </p>
                     </div>
+                </div>
+                <div class="visible-xs-block view-map-wrapper">
+                    <button class="btn btn-yellow" id="view-map">View Map</button>
                 </div>
             </div>
         </div>
