@@ -23,6 +23,10 @@
     background-color: transparent;
 }
 
+    .gallery-image .carousel-control .glyphicon {
+        top: auto;
+    }
+
     .gallery-image:not(.active), .gallery-image:not(.active) .center-helper {
         opacity: 0;
         visibility: hidden;
@@ -57,11 +61,11 @@
         }
 
         .gallery-image .center-helper.left .glyphicon {
-            left: -20%;
+            left: 10px;
         }
 
         .gallery-image .center-helper.right .glyphicon {
-            right: -20%;
+            right: 10px;
         }
 
     .gallery-image .image {
@@ -109,5 +113,13 @@
         -o-transition: opacity linear 1s, visibility linear 1s;
         -webkit-transition: opacity linear 1s, visibility linear 1s;
         transition: opacity linear 1s, visibility linear 1s;
+    }
+
+    .gallery-image .center-helper.left .glyphicon {
+        left: -20%;
+    }
+
+    .gallery-image .center-helper.right .glyphicon {
+        right: -20%;
     }
 }
