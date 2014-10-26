@@ -34,7 +34,8 @@ body {
 }
 
 .bridesmaids a img,
-.groomsmen a img {
+.groomsmen a img,
+.xs-party-image img {
     width: 100%;
     border-radius: 50%;
     -webkit-box-shadow: 7px 10px 15px 5px rgba(0,0,0,0.4);
@@ -51,7 +52,7 @@ body {
 }
 
 .party-popover {
-    max-width: 600px;
+    color: #333;
     background-color: rgb(255, 255, 170);
     padding: 0;
     border: 2px solid #7d123e;
@@ -67,11 +68,20 @@ body {
     bottom: 2px;
 }
 
+.popover-title.groomsman-header {
+    color: white;
+    background-color: #282828;
+}
+
+.popover-subtitle.groomsman-header {
+    background-color: #282828;
+}
+
 .popover-title {
     background-color: white;
     font-weight: bold;
     padding-bottom: 0;
-    font-size: 55px;
+    font-size: 32px;
     line-height: 1.1;
     font-weight: 500;
     border-bottom: none;
@@ -80,7 +90,7 @@ body {
 .popover-subtitle {
     background-color: white;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 1.1;
     font-weight: 500;
     border-bottom: 2px solid #7d123e;
@@ -98,11 +108,66 @@ body {
     line-height: 24px;
     letter-spacing: 0.08em;
     line-height: 1.42857143;
-    font-size: 15px;
     font-family: Roboto,Arial,sans-serif;
+    font-size: 13px;
     padding: 14px;
     padding-top: 7px;
 }
+
+@media (max-width: 767px) {
+    .party-popover {
+        margin-left: -30px;
+        margin-right: -30px;
+        margin-bottom: 0;
+        border-top: none;
+        border-width: 1px;
+    }
+
+    .party-popover:last-child {
+        border-radius: 15px;
+        margin-bottom: -30px;
+    }
+
+    .party-popover.groomsman .xs-party-header {
+        background-color: #282828;
+    }
+
+    .xs-party-header {
+        border-bottom: 2px solid #7d123e;
+        background-color: white;
+        -moz-box-shadow:    0px 1px 4px 0px rgba(50, 50, 50, 0.75),
+                            0px -1px 4px 0px rgba(50, 50, 50, 0.75);
+        -webkit-box-shadow: 0px 1px 4px 0px rgba(50, 50, 50, 0.75),
+                            0px -1px 4px 0px rgba(50, 50, 50, 0.75);
+        box-shadow:         0px 1px 4px 0px rgba(50, 50, 50, 0.75), 
+                            0px -1px 4px 0px rgba(50, 50, 50, 0.75);
+        margin-right: -3px;
+        margin-left: -3px;
+        border-bottom: 1px solid #7d123e;
+    }
+
+    .xs-party-title {
+        margin-left: 75px;
+    }
+
+    .xs-party-image {
+        width: 75px;
+        float: left;
+        padding: 7px;
+    }
+
+    .xs-party-image img {
+        -webkit-box-shadow: 3px 5px 7px 2px rgba(0,0,0,0.4);
+        -moz-box-shadow:    3px 5px 7px 2px rgba(0,0,0,0.4);
+        box-shadow:         3px 5px 7px 2px rgba(0,0,0,0.4);
+    }
+
+    .popover-subtitle {
+        border-bottom: none;
+    }
+}
+
+
 
 @media (min-width: 768px) {
     .modal-backdrop.in {
@@ -112,5 +177,21 @@ body {
 
     body {
         background-image: url(../img/engagement-session/lg/engagement_34.jpg)
+    }
+
+    .party-popover {
+        max-width: 600px;
+    }
+
+    .popover-title {
+        font-size: 55px;
+    }
+
+    .popover-subtitle {
+        font-size: 36px;
+    }
+
+    .popover-content {
+        font-size: 15px;
     }
 }
