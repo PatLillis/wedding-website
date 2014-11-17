@@ -1,4 +1,6 @@
-patlillis.github.io
+patandkiersten.com
 ===================
 
-For testing website layouts and deployments.
+Repo for our Wedding Website.
+
+Minified/Optimized files are in the /production branch.
