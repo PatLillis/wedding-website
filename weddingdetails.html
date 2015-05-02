@@ -23,103 +23,109 @@
     <![endif]-->
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-center" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
+	<nav class="navbar navbar-default navbar-fixed-top navbar-center" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
 
-        <div class="navbar-inner">
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="home">Home</a></li>
-                    <li><a href="ourstory">Our Story</a></li>
-                    <li><a href="bridalparty">Bridal Party</a></li>
-                    <li><a href="gallery">Gallery</a></li>
-                    <li class="navbar-active"><a href="weddingdetails">Wedding Details</a></li>
-                    <li><a href="registry">Registry</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.navbar-inner -->
-    </nav>
+		<div class="navbar-inner">
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="home">Home</a></li>
+					<li><a href="ourstory">Our Story</a></li>
+					<li><a href="bridalparty">Bridal Party</a></li>
+					<li><a href="gallery">Gallery</a></li>
+					<li class="navbar-active"><a href="weddingdetails">Wedding Details</a></li>
+					<li><a href="registry">Registry</a></li>
+				</ul>
+				<ul class="nav navbar-right hidden-sm">
+					<li><p class="navbar-text ">Made with <span class="glyphicon glyphicon-heart raspberry"></span> by the groom</p></li>
+				</ul> 
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.navbar-inner -->
+	</nav>
 
-    <div class="container-fluid main">
-        <div class="google-map-wrapper">
-            <div class="google-map" id="map-canvas"></div>
-        </div>
-        <div class="google-map-cover"></div>
-        <div class="visible-xs view-details-wrapper">
-            <button class="btn btn-yellow" id="view-details">View Details</button>
-        </div>
+	<div class="container-fluid main">
+		<div class="google-map-wrapper">
+			<div class="google-map" id="map-canvas"></div>
+		</div>
+		<div class="google-map-cover"></div>
+		<div class="visible-xs view-details-wrapper">
+			<button class="btn btn-yellow" id="view-details">View Details</button>
+		</div>
 
-        <div class="row content-card-row">
-            <div class="col-sm-1 bg-raspberry-trans content-card-col">
-                <h1 class="content-card-title text-center">Wedding Details</h1>
-                <!-- Nav tabs -->
-                <div class="tab-titles">
-                    <h4 class="tab-title fade ceremony active in">Ceremony</h4>
-                    <h4 class="tab-title fade reception">Reception</h4>
-                    <h4 class="tab-title fade hotels">Hotels</h4>
-                </div>
-                <div class="nav-tabs-wrapper">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li class="page-next fade in"><span role="tab">&raquo;</span></li>
-                        <li class="page page-last"><a href="#hotels" role="tab" data-toggle="tab"></a></li>
-                        <li class="page"><a href="#reception" role="tab" data-toggle="tab"></a></li>
-                        <li class="active page page-first"><a href="#ceremony" role="tab" data-toggle="tab"></a></li>
-                        <li class="page-prev fade"><span class="disabled" role="tab">&laquo;</span></li>
-                    </ul>
-                </div>
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div class="tab-pane active fade in" id="ceremony">
-                        <p>
-                            The wedding ceremony will begin at 3:15pm at Journey Christian Church in Brownsburg, IN.
-                            The church is located off of E. US Highway 136, between Green St. and
-                            W. Northfield Dr. The address is <a href="https://goo.gl/maps/xOuLG" target="_blank"><b>6690 E. U.S. Highway 136, Brownsburg, IN 46112</b></a>.
-                        </p>
-                    </div>
-                    <div class="tab-pane fade" id="reception">
-                        <p>
-                            Cocktail hour at the reception will start around 4:30ish, after the ceremony ends.
-                            Dinner and dancing will begin shortly after. Festivities will be held in the Avon Wedding Barn,
-                            and surrounding greenery. Please park at the Bread of Life Church next door. There will be
-                            a golf cart available for those who need assistance.
-                            The address is <a href="https://goo.gl/maps/auFAJ" target="_blank"><b>7424 E. County Road 100 North Avon, IN 46123</b></a>.
-                        </p>
-                    </div>
-                    <div class="tab-pane fade" id="hotels">
-                        <p>
-                            We have reserved a block of rooms at the Fairfield Inn & Suites in
-                            Avon for the night of Saturday, May 16. Just mention the Manifold/Lillis wedding
-                            and they'll mark you down for our block. May is race month in Indianapolis,
-                            so hotels fill fast. We <i>strongly</i> recommend you book early! There will be a shuttle
-                            running back and forth from the Fairfield to the barn for anyone staying there who doesn't
-                            want to drive to the reception. The address for the Fairfield is
-                            <a href="https://goo.gl/maps/GL1PG" target="_blank"><b>119 Angelina Way Avon, IN 46123</b></a>.
-                        </p>
-                    </div>
-                </div>
-                <div class="visible-xs-block view-map-wrapper">
-                    <button class="btn btn-yellow" id="view-map">View Map</button>
-                </div>
-            </div>
-        </div>
-    </div>
+		<div class="row content-card-row">
+			<div class="col-sm-1 bg-raspberry-trans content-card-col">
+				<h1 class="content-card-title text-center">Wedding Details</h1>
+				<!-- Nav tabs -->
+				<div class="tab-titles">
+					<h4 class="tab-title fade ceremony active in">Ceremony</h4>
+					<h4 class="tab-title fade reception">Reception</h4>
+					<h4 class="tab-title fade hotels">Hotels</h4>
+				</div>
+				<div class="nav-tabs-wrapper">
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="page-next fade in"><span role="tab">&raquo;</span></li>
+						<li class="page page-last"><a href="#hotels" role="tab" data-toggle="tab"></a></li>
+						<li class="page"><a href="#reception" role="tab" data-toggle="tab"></a></li>
+						<li class="active page page-first"><a href="#ceremony" role="tab" data-toggle="tab"></a></li>
+						<li class="page-prev fade"><span class="disabled" role="tab">&laquo;</span></li>
+					</ul>
+				</div>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active fade in" id="ceremony">
+						<p>
+							The wedding ceremony will begin at 3:15pm at Journey Christian Church in Brownsburg, IN.
+							The church is located off of E. US Highway 136, between Green St. and
+							W. Northfield Dr. The address is <a href="https://goo.gl/maps/xOuLG" target="_blank"><b>6690 E. U.S. Highway 136, Brownsburg, IN 46112</b></a>.
+						</p>
+					</div>
+					<div class="tab-pane fade" id="reception">
+						<p>
+							Cocktail hour at the reception will start around 4:30ish, after the ceremony ends.
+							Dinner and dancing will begin shortly after. Festivities will be held in the Avon Wedding Barn
+							and surrounding greenery. No smoking is allowed, and no outside alcohol please! Parking is available at the Bread of Life Church next door. There will be
+							a golf cart available for those who need assistance.
+							The address is <a href="https://goo.gl/maps/auFAJ" target="_blank"><b>7424 E. County Road 100 North Avon, IN 46123</b></a>.
+						</p>
+					</div>
+					<div class="tab-pane fade" id="hotels">
+						<p>
+							We have reserved a block of rooms at the Fairfield Inn & Suites in
+							Avon for the night of Saturday, May 16. Just mention the Manifold/Lillis wedding
+							and they'll mark you down for our block. May is race month in Indianapolis,
+							so hotels fill fast. We <i>strongly</i> recommend you book early! There are also rooms avilable
+							at the Comfort Inn next door. There will be a shuttle running back and forth from the Fairfield and Comfort Inns
+							to the barn for anyone staying there who doesn't
+							want to drive to the reception. The address for the Fairfield Inn is
+							<a href="https://goo.gl/maps/GL1PG" target="_blank"><b>119 Angelina Way Avon, IN 46123</b></a>,
+							and the address for the Comfort Inn is <a href="https://goo.gl/maps/16s47" target="_blank"><b>8229 E. US Hwy 36
+							Avon, IN 46123</b></a>.
+						</p>
+					</div>
+				</div>
+				<div class="visible-xs-block view-map-wrapper">
+					<button class="btn btn-yellow" id="view-map">View Map</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaQdh5bGI1js2QXfl6JK7ZfTZYVvkpWro"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/setup.js"></script>
-    <script src="js/custom-behavior.js"></script>
-    <script src="js/weddingdetails.js"></script>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaQdh5bGI1js2QXfl6JK7ZfTZYVvkpWro"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/setup.js"></script>
+	<script src="js/custom-behavior.js"></script>
+	<script src="js/weddingdetails.js"></script>
 </body>
 </html>

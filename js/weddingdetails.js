@@ -25,12 +25,18 @@
     //Initialize map
     var barnLatLng = new google.maps.LatLng(39.779423, -86.391244);
     var churchLatLng = new google.maps.LatLng(39.847335, -86.408528);
-    var hotelLatLng = new google.maps.LatLng(39.764989, -86.360064);
+    var fairfieldLatLng = new google.maps.LatLng(39.764989, -86.360064);
+    var comfortInnLatLng = new google.maps.LatLng(39.7621513, -86.3775369);
+    var hotelLatLng = new google.maps.LatLng(
+        (Math.max(fairfieldLatLng.lat(), comfortInnLatLng.lat()) + Math.min(fairfieldLatLng.lat(), comfortInnLatLng.lat())) / 2,
+        (Math.max(fairfieldLatLng.lng(), comfortInnLatLng.lng()) + Math.min(fairfieldLatLng.lng(), comfortInnLatLng.lng())) / 2
+		);
     var shownSpots = [barnLatLng];
 
     centerLatLng = new google.maps.LatLng(
-        (Math.max(barnLatLng.lat(), churchLatLng.lat(), hotelLatLng.lat()) + Math.min(barnLatLng.lat(), churchLatLng.lat(), hotelLatLng.lat())) / 2,
-        (Math.max(barnLatLng.lng(), churchLatLng.lng(), hotelLatLng.lng()) + Math.min(barnLatLng.lng(), churchLatLng.lng(), hotelLatLng.lng())) / 2);
+        (Math.max(barnLatLng.lat(), churchLatLng.lat(), fairfieldLatLng.lat(), comfortInnLatLng.lat()) + Math.min(barnLatLng.lat(), churchLatLng.lat(), fairfieldLatLng.lat(), comfortInnLatLng.lat())) / 2,
+        (Math.max(barnLatLng.lng(), churchLatLng.lng(), fairfieldLatLng.lng(), comfortInnLatLng.lng()) + Math.min(barnLatLng.lng(), churchLatLng.lng(), fairfieldLatLng.lng(), comfortInnLatLng.lng())) / 2
+		);
 
     var mapOptions = {
         center: churchLatLng,
@@ -57,23 +63,26 @@
     $('a[href="#ceremony"]').on('shown.bs.tab', function (e) {
         bounce(churchMarker);
         stopBounce(barnMarker);
-        stopBounce(hotelMarker);
+        stopBounce(fairfieldMarker);
+        stopBounce(comfortInnMarker);
     });
 
     $('a[href="#reception"]').on('shown.bs.tab', function (e) {
         bounce(barnMarker);
         stopBounce(churchMarker);
-        stopBounce(hotelMarker);
+        stopBounce(fairfieldMarker);
+        stopBounce(comfortInnMarker);
     }).one('shown.bs.tab', function () {
         updateCenter(barnLatLng);
     });
 
     $('a[href="#hotels"]').on('shown.bs.tab', function (e) {
-        bounce(hotelMarker);
+    	bounce(fairfieldMarker);
+    	bounce(comfortInnMarker);
         stopBounce(barnMarker);
         stopBounce(churchMarker);
     }).one('shown.bs.tab', function () {
-        updateCenter(hotelLatLng);
+    	updateCenter(hotelLatLng);
     });
 
     var barnIcon = new google.maps.MarkerImage(
@@ -115,12 +124,20 @@
         icon: churchIcon
     });
 
-    var hotelMarker = new google.maps.Marker({
-        position: hotelLatLng,
+    var fairfieldMarker = new google.maps.Marker({
+        position: fairfieldLatLng,
         animation: null,
         map: map,
         title: "Fairfield Inn & Suites",
         icon: hotelIcon
+    });
+
+    var comfortInnMarker = new google.maps.Marker({
+    	position: comfortInnLatLng,
+    	animation: null,
+    	map: map,
+    	title: "Comfort Inn",
+    	icon: hotelIcon
     });
 
     var barnContentString = '<div class="info-window-content">' +
@@ -145,7 +162,7 @@
       '<a href="http://www.4journey.com" target="_blank">4journey.com</a>' +
       '</div>';
 
-    var hotelContentString = '<div class="info-window-content">' +
+    var fairfieldContentString = '<div class="info-window-content">' +
       '<h1 class="info-window-heading" class="firstHeading">Fairfield Inn & Suites</h1>' +
       '<div class="info-window-content-body">' +
       '<address>' +
@@ -156,6 +173,17 @@
       '<a href="http://www.marriott.com/hotels/travel/indav-fairfield-inn-and-suites-indianapolis-avon/" target="_blank">marriott.com</a>' +
       '</div>';
 
+	var comfortInnContentString = '<div class="info-window-content">' +
+      '<h1 class="info-window-heading" class="firstHeading">Comfort Inn</h1>' +
+      '<div class="info-window-content-body">' +
+      '<address>' +
+		'8229 E. US Hwy 36<br>' +
+		'Avon, IN 46123<br>' +
+		'(317) 272-8789' +
+      '</address>' +
+      '<a href="https://www.choicehotels.com/indiana/avon/comfort-inn-hotels/in271" target="_blank">comfortinn.com</a>' +
+      '</div>';
+
     var barnInfowindow = new google.maps.InfoWindow({
         content: barnContentString,
         //maxWidth: $('.container-fluid.main').innerWidth() - 50
@@ -164,24 +192,37 @@
         content: churchContentString,
         //maxWidth: $('.container-fluid.main').innerWidth() - 50
     });
-    var hotelInfowindow = new google.maps.InfoWindow({
-        content: hotelContentString,
+    var fairfieldInfowindow = new google.maps.InfoWindow({
+        content: fairfieldContentString,
         //maxWidth: $('.container-fluid.main').innerWidth() - 50
+    });
+    var comfortInnInfowindow = new google.maps.InfoWindow({
+    	content: comfortInnContentString,
+    	//maxWidth: $('.container-fluid.main').innerWidth() - 50
     });
 
     google.maps.event.addListener(barnMarker, 'click', function () {
         churchInfowindow.close();
-        hotelInfowindow.close();
+        fairfieldInfowindow.close();
+        comfortInnInfowindow.close();
         barnInfowindow.open(map, barnMarker);
     });
     google.maps.event.addListener(churchMarker, 'click', function () {
         barnInfowindow.close();
-        hotelInfowindow.close();
+        fairfieldInfowindow.close();
+        comfortInnInfowindow.close();
         churchInfowindow.open(map, churchMarker);
     });
-    google.maps.event.addListener(hotelMarker, 'click', function () {
+    google.maps.event.addListener(fairfieldMarker, 'click', function () {
         barnInfowindow.close();
         churchInfowindow.close();
-        hotelInfowindow.open(map, hotelMarker);
+        comfortInnInfowindow.close();
+        fairfieldInfowindow.open(map, fairfieldMarker);
+    });
+    google.maps.event.addListener(comfortInnMarker, 'click', function () {
+    	barnInfowindow.close();
+    	churchInfowindow.close();
+    	fairfieldInfowindow.close();
+    	comfortInnInfowindow.open(map, comfortInnMarker);
     });
 });
