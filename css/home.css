@@ -1,3 +1,7 @@
+html {
+    overflow: hidden;
+}
+
 body {
     background-image: url(../img/engagement-session/sm/engagement_67.jpg);
     overflow: hidden;
